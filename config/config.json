@@ -1,0 +1,7 @@
+{
+    "ENV": "development",
+    "DEBUG": true,
+    "SECRET_KEY": "SeCrEtKeY",
+    "HOST": "0.0.0.0",
+    "PORT": 5000
+}
