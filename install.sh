@@ -20,3 +20,12 @@ source venv/bin/activate
 
 # Install python packages
 pip install --no-cache-dir -r requirements.txt
+
+# Install sqlite3 package
+sudo apt install sqlite3
+
+# Create sqlite database file and schema
+sqlite3 songs.db < schema.sql
+
+# Create songs_files directory with read/write permissions
+mkdir -m 666 songs_files
