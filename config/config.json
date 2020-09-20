@@ -2,6 +2,10 @@
     "ENV": "development",
     "DEBUG": true,
     "SECRET_KEY": "SeCrEtKeY",
+    "DOMAIN_NAME": "localhost",
     "HOST": "0.0.0.0",
-    "PORT": 5000
+    "PORT": 5000,
+    "DATABASE": "songs.db",
+    "UPLOAD_FOLDER": "songs_files",
+    "CUSTOM_STATIC_PATH": "songs_files"
 }
