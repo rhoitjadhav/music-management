@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %} Music Manager</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='songs.css') }}">
+</head>
+
+<body>
+    <br>
+    <div class="in-middle">
+        <ul class="menu">
+            <a href="{{ url_for('songs.view') }}">SONGS</a>
+            <a href="{{ url_for('songs.upload') }}">UPLOAD</a>
+            <a href="{{ url_for('songs.search') }}">SEARCH</a>
+        </ul>
+    </div>
+    <br><br><br>
+
+    <table class="center">
+
+        <tr>
+            {% for col in table_col %}
+            <th>{{ col }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in table_row %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td><a href={{share_url}}{{row[3]}}>Stream</a></td>
+            <td><a href={{delete_url}}{{row[3]}}>Delete</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

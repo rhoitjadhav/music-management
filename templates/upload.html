@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>{% block title %}{% endblock %} Music Manager</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='songs.css') }}">
+</head>
+</head>
+
+<body>
+	<br>
+	<div class="in-middle">
+		<ul class="menu">
+			<a href="{{ url_for('songs.view') }}">SONGS</a>
+			<a href="{{ url_for('songs.upload') }}">UPLOAD</a>
+			<a href="{{ url_for('songs.search') }}">SEARCH</a>
+		</ul>
+	</div>
+	<br><br><br>
+
+	<form method="POST" action="{{ url_for('songs.upload') }}" enctype="multipart/form-data">
+		<p>Title: <input type="text" name="title" value="Call it what you want"></p> <br>
+		<p>Arist: <input type="text" name="artist" value="Taylor Swift"> </p><br> <br>
+		<p>Album: <input type="text" name="album" value="Reputation"> </p><br> <br>
+		<table>
+			<ul>
+				<input type="file" name="file">
+				<button>Upload</button>
+			</ul>
+		</table>
+
+	</form>
+
+</body>
+
+</html>

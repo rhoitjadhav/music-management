@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %} Music Manager</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='songs.css') }}">
+</head>
+
+<body>
+    <br>
+    <div class="in-middle">
+        <ul class="menu">
+            <a href="{{ url_for('songs.view') }}">SONGS</a>
+            <a href="{{ url_for('songs.upload') }}">UPLOAD</a>
+            <a href="{{ url_for('songs.search') }}">SEARCH</a>
+        </ul>
+    </div>
+    <br><br><br>
+    <p>{{ success_message }}</p>
+</body>
+
+</html>
