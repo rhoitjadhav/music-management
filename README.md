@@ -41,12 +41,12 @@ The application consists of 5 directories and 6 files along with README.md and .
 ## Security Measurements
 In order to secure the application there are few measurements that need to be taken care of, such measurements are:
 
-1. Token based authentication
+- **Token based authentication**
     - It is the process where the user sends his credentials to the server, server will validate the user details and generate a token which is sent as response to the users, and user store the token in client side, so client do further HTTP call using this token which can be added to the header and server validates the token and send a response to the particular api request
 
-2. Rate Limiter
+- **Rate Limiter**
     - It is the number of api calls an app or user can make within a given time period. If this limit is exceeded or if CPU or total time limits are exceeded the user will get an error and the request gets failed
 
-3. SQL Injection
+- **SQL Injection**
     - SQL Injection is an attack when we ask for a user to input something such as userid/username instead of typing this user gives an SQL statement that will run on database server
 
