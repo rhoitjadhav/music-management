@@ -1,37 +1,3 @@
-# import sqlite3
-
-
-# class SqliteDB:
-#     def connect(self, db_file):
-#         self.conn = sqlite3.connect(db_file)
-
-#     def get_all(self, query):
-#         cur = self.conn.execute(query)
-#         rv = cur.fetchall()
-#         self.close()
-#         return rv
-
-#     def insert(self, query):
-#         pass
-
-#     def delete(self, query):
-#         pass
-
-#     def update(self, query):
-#         pass
-
-#     def close(self):
-#         self.conn.close()
-
-
-# def db_connection():
-#     db = SqliteDB()
-#     if db.connect("songs.db") is False:
-#         return False
-
-#     return db
-
-
 import sqlite3
 from flask import g, current_app
 
